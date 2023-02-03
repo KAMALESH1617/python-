@@ -1,0 +1,243 @@
+# code 1
+#Product (product_id)
+import sys
+product_id = int(sys.argv[1])
+ 
+c = sqlite3.connect('')
+cu = conn.cursor()
+
+
+query = "SELECT * FROM products WHERE product_id=?"
+cu.execute(query, (product_id,))
+result = cursor.fetchone()
+if result:
+    print("Product info:")
+    print(f"ID: {result[0]}")
+    print(f"Name: {result[1]}")
+    print(f"Price: {result[2]}")
+    print(f"Quantity: {result[3]}")
+else:
+    print("Product not found.")
+
+c.close()
+
+
+
+# code 2
+#Location (location_id) 
+
+location_id = int(input("Enter location id: "))
+
+if location_id == 1:
+    print("You are at the beach.")
+elif location_id == 2:
+    print("You are at the park.")
+elif location_id == 3:
+    print("You are at the mall.")
+else:
+    print("Unknown location.")
+    
+    
+    
+    # code 3
+#product movement python code
+movement_id = 123
+timestamp = "2020-04-13T16:00:00"
+from_location = "Warehouse A"
+to_location = "Warehouse B"
+product_id = 321
+qty = 50
+
+sql = "INSERT INTO ProductMovement "
+sql += "(movement_id, timestamp, from_location, to_location, product_id, qty) "
+sql += "VALUES (%s, %s, %s, %s, %s, %s)"
+
+data = (movement_id, timestamp, from_location, to_location, product_id, qty)
+
+cursor.execute(sql, data)
+
+
+
+# code 4
+# Add/Edit/View ProductMovement
+# Add Product 
+def addProduct(name,location):
+    # code to add product 
+    print("Product added successfully")
+ 
+#Edit Product
+def editProduct(name,location):
+    # code to edit product 
+    print("Product edited successfully")
+ 
+# View Product
+def viewProduct(name):
+    # code to view product 
+    print("Product Details:")
+ 
+# Add Location
+def addLocation(name,address):
+    # code to add location 
+    print("Location added successfully")
+ 
+# Edit Location
+def editLocation(name,address):
+    # code to edit location 
+    print("Location edited successfully")
+ 
+# View Location
+def viewLocation(name):
+    # code to view location 
+    print("Location Details:")
+ 
+# Add Product Movement
+def addProductMovement(product_name,location_name):
+    # code to add product movement 
+    print("Product movement added successfully")
+ 
+# Edit Product Movement
+def editProductMovement(product_name,location_name):
+    # code to edit product movement 
+    print("Product
+    
+    
+    
+    
+    # code 5
+# Balance quantity in each location Use Cases
+balance_data = {
+    'New York' : 20,
+    'Boston' : 40,
+    'Los Angeles' : 30
+}
+
+# Print the balance for each location
+for location, balance in balance_data.items():
+    print('Location: {} Balance: {}'.format(location, balance))
+    
+    
+    
+   # code 6
+#Create 3/4 Products
+class Product:
+    def __init__(self, name, price, quantity):
+        self.name = name
+        self.price = price
+        self.quantity = quantity
+
+product1 = Product("Apple", 15.50, 10)
+
+def get_total_cost(self):
+    return self.quantity * self.price
+
+def add_quantity(self, additional_quantity):
+    self.quantity += additional_quantity
+    
+    
+    
+    
+    # code 7
+#Create 3/4 Location 
+location1 = {
+    'name': 'kumbakonam',
+    'population': '148412151',
+    'climate': 'temperate'
+}
+location2 = {
+    'name': 'kodavasal',
+    'population': '161716225',
+    'climate': 'humid subtropical'
+}
+
+location3 = {
+    'name': 'karambakudi',
+    'population': '171616598',
+    'climate': 'Mediterranean'
+}
+
+location4 = {
+    'name': 'p kottai',
+    'population': '542841',
+    'climate': 'desert'
+}
+
+
+
+
+# code 8
+#Make ProductMovements 
+
+class ProductMovement:
+    
+    def __init__(self, product, quantity, direction):
+        self.product = product
+        self.quantity = quantity
+        self.direction = direction
+    
+    def get_product(self):
+        return self.product
+    
+    def get_quantity(self):
+        return self.quantity
+    
+    def get_direction(self):
+        return self.direction
+        
+        
+        
+        
+        
+        # code 9
+#Move Product A to Location X 
+
+from location_x import LocationX
+from product_a import ProductA
+
+
+product_a = ProductA()
+
+location_x = LocationX()
+location_x.add_product(product_a)
+
+
+
+
+# code 10
+#Move Product B to Location X
+product = 'Product B' 
+location = 'Location X'
+
+print(f'Updating {product} to {location}...')
+product_location = {product: location}
+print(f'{product} is now located at {location}')
+
+
+
+# code 11
+#Move Product A from Location X to Location Y
+fromLocationX = 'Product A'
+toLocationY = 'Product A'
+
+def moveProduct(fromLocationX, toLocationY):
+    if fromLocationX == toLocationY:
+        print("Product is already at Location Y")
+    else:
+        print("Moving Product A from Location X to Location Y")
+
+moveProduct(fromLocationX, toLocationY)
+
+
+
+
+# code 12
+import pandas as pd
+
+# create a dataframe
+df = pd.DataFrame({'Product':['Pen','Pencil','Eraser','Sharpener'],
+                   'Warehouse A':[10,20,30,40],
+                   'Warehouse B':[20,30,40,50],
+                   'Warehouse C':[30,40,50,60]
+                  })
+
+# print the dataframe
+print(df)
